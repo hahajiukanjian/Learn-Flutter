@@ -42,8 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: _dyWidget,
+      body: const Center(
+        child: TipsWidget(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _updateWidget,
@@ -65,5 +65,14 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _toggle = !_toggle;
     });
+  }
+}
+
+class TipsWidget extends StatelessWidget {
+  const TipsWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text("自定义Widget");
   }
 }
