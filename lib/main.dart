@@ -31,6 +31,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String tips = "";
+  bool _toggle = true;
+
+  get _dyWidget => _toggle ? const Text("Widget1") : const Text("Widget2");
 
   @override
   Widget build(BuildContext context) {
@@ -40,19 +43,27 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(tips),
+        child: _dyWidget,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _updateTips,
+        onPressed: _updateWidget,
         tooltip: 'Update Tips',
         child: const Icon(Icons.update),
       ),
     );
   }
 
+  // 更新Flutter布局
   void _updateTips() {
     setState(() {
       tips = "Hello, Flutter!";
+    });
+  }
+
+  // 修改或者删除一个Widget
+  void _updateWidget() {
+    setState(() {
+      _toggle = !_toggle;
     });
   }
 }
