@@ -30,6 +30,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String tips = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,17 +40,19 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Container(
-          decoration: const BoxDecoration(color: Colors.lightBlue),
-          child: const Text(
-            "声明式UI",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
-        ),
+        child: Text(tips),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _updateTips,
+        tooltip: 'Update Tips',
+        child: const Icon(Icons.update),
       ),
     );
+  }
+
+  void _updateTips() {
+    setState(() {
+      tips = "Hello, Flutter!";
+    });
   }
 }
