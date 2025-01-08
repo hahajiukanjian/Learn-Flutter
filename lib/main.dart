@@ -35,6 +35,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
   get _dyWidget => _toggle ? const Text("Widget1") : const Text("Widget2");
 
+  get _listView => ListView(
+        children: const [
+          Text("噫嘘唏"),
+          Text("维护高在"),
+          Text("宝贝我爱你"),
+          Text("宝贝我爱你", style: TextStyle(fontSize: 200)),
+          Text("我爱曹旭", style: TextStyle(fontWeight: FontWeight.w900)),
+          Text("曹旭爱我", style: TextStyle(color: Colors.red)),
+        ],
+      );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,8 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Center(
-        child: TipsWidget(),
+      body: Center(
+        child: _listView,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _updateWidget,
