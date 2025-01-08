@@ -55,13 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
+        child: GestureDetector(
+          onLongPress: () {
             setState(() {
               _counter++;
             });
           },
-          child: Text("点击$_counter下"),
+          child: Text("点击了$_counter次"),
         ),
       ),
       floatingActionButton: FloatingActionButton(
