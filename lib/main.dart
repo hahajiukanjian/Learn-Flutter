@@ -30,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
   String tips = "";
   bool _toggle = true;
 
@@ -54,7 +55,14 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: _listView,
+        child: ElevatedButton(
+          onPressed: () {
+            setState(() {
+              _counter++;
+            });
+          },
+          child: Text("点击$_counter下"),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _updateWidget,
