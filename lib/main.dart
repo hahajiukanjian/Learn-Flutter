@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:started_flutter/http_study03.dart';
+import 'package:started_flutter/http/http_study04.dart';
+import 'package:started_flutter/jsonToxxx/json_to_xxx.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,23 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HttpStudy04(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const HttpStudy03();
   }
 }
