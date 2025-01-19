@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:started_flutter/http/http_study04.dart';
-import 'package:started_flutter/jsonToxxx/json_to_xxx.dart';
+import 'package:started_flutter/future/future_study_02.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HttpStudy04(),
+      home: const FutureStudy02(),
     );
   }
 }
