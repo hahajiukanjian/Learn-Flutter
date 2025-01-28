@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:started_flutter/shared_preference/shared_preference_study_02.dart';
+import 'package:started_flutter/jsonToxxx/json_to_xxx_02.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SPStudy02(),
+      home: const JsonToXxx02(),
     );
   }
 }
